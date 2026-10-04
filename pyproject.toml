@@ -1,0 +1,29 @@
+[project]
+name = "toolkit"
+version = "0.1.0"
+description = "Калькулятор выражений и конвертер величин (лабораторная работа №1)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["calculator", "converter", "cli"]
+dependencies = []
+
+# ---------------------------------------------------------------------------
+# Настройки setuptools для src-layout
+# ---------------------------------------------------------------------------
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# ---------------------------------------------------------------------------
+# Настройки pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/toolkit"]
